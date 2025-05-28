@@ -43,6 +43,8 @@
             this.btnCargar = new System.Windows.Forms.Button();
             this.timerProgress = new System.Windows.Forms.Timer(this.components);
             this.trackProgress = new System.Windows.Forms.TrackBar();
+            this.panelVisualizer = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.volumenSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axPlayer)).BeginInit();
@@ -52,7 +54,7 @@
             // picCanvas
             // 
             this.picCanvas.BackColor = System.Drawing.Color.Black;
-            this.picCanvas.Location = new System.Drawing.Point(52, 58);
+            this.picCanvas.Location = new System.Drawing.Point(45, 58);
             this.picCanvas.Margin = new System.Windows.Forms.Padding(2);
             this.picCanvas.Name = "picCanvas";
             this.picCanvas.Size = new System.Drawing.Size(697, 312);
@@ -64,7 +66,7 @@
             this.btnPrevious.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrevious.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrevious.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPrevious.Location = new System.Drawing.Point(237, 413);
+            this.btnPrevious.Location = new System.Drawing.Point(226, 426);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(55, 55);
             this.btnPrevious.TabIndex = 2;
@@ -77,7 +79,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTitulo.Location = new System.Drawing.Point(241, 20);
+            this.lblTitulo.Location = new System.Drawing.Point(246, 19);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(363, 25);
             this.lblTitulo.TabIndex = 3;
@@ -88,7 +90,7 @@
             this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlay.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPlay.Location = new System.Drawing.Point(308, 413);
+            this.btnPlay.Location = new System.Drawing.Point(295, 426);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(55, 55);
             this.btnPlay.TabIndex = 4;
@@ -101,7 +103,7 @@
             this.btnPause.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPause.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPause.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPause.Location = new System.Drawing.Point(380, 413);
+            this.btnPause.Location = new System.Drawing.Point(365, 426);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(55, 55);
             this.btnPause.TabIndex = 5;
@@ -114,7 +116,7 @@
             this.btnStop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStop.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStop.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnStop.Location = new System.Drawing.Point(450, 413);
+            this.btnStop.Location = new System.Drawing.Point(436, 426);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(55, 55);
             this.btnStop.TabIndex = 6;
@@ -127,7 +129,7 @@
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnNext.Location = new System.Drawing.Point(522, 413);
+            this.btnNext.Location = new System.Drawing.Point(506, 426);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(55, 55);
             this.btnNext.TabIndex = 7;
@@ -138,10 +140,11 @@
             // volumenSlider
             // 
             this.volumenSlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.volumenSlider.Location = new System.Drawing.Point(671, 423);
+            this.volumenSlider.Location = new System.Drawing.Point(754, 179);
             this.volumenSlider.Maximum = 100;
             this.volumenSlider.Name = "volumenSlider";
-            this.volumenSlider.Size = new System.Drawing.Size(104, 45);
+            this.volumenSlider.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.volumenSlider.Size = new System.Drawing.Size(45, 104);
             this.volumenSlider.TabIndex = 9;
             this.volumenSlider.TickFrequency = 0;
             this.volumenSlider.TickStyle = System.Windows.Forms.TickStyle.None;
@@ -153,7 +156,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(648, 419);
+            this.label1.Location = new System.Drawing.Point(749, 151);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 25);
             this.label1.TabIndex = 10;
@@ -174,7 +177,7 @@
             this.btnCargar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCargar.Location = new System.Drawing.Point(663, 470);
+            this.btnCargar.Location = new System.Drawing.Point(339, 494);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(122, 29);
             this.btnCargar.TabIndex = 12;
@@ -190,7 +193,7 @@
             // trackProgress
             // 
             this.trackProgress.LargeChange = 10;
-            this.trackProgress.Location = new System.Drawing.Point(52, 375);
+            this.trackProgress.Location = new System.Drawing.Point(45, 375);
             this.trackProgress.Maximum = 100;
             this.trackProgress.Name = "trackProgress";
             this.trackProgress.Size = new System.Drawing.Size(697, 45);
@@ -199,12 +202,28 @@
             this.trackProgress.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackProgress.Scroll += new System.EventHandler(this.trackProgress_Scroll);
             // 
+            // panelVisualizer
+            // 
+            this.panelVisualizer.Location = new System.Drawing.Point(12, 450);
+            this.panelVisualizer.Name = "panelVisualizer";
+            this.panelVisualizer.Size = new System.Drawing.Size(200, 31);
+            this.panelVisualizer.TabIndex = 14;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(575, 450);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 31);
+            this.panel1.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(787, 502);
+            this.ClientSize = new System.Drawing.Size(787, 535);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelVisualizer);
             this.Controls.Add(this.trackProgress);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.axPlayer);
@@ -243,6 +262,8 @@
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Timer timerProgress;
         private System.Windows.Forms.TrackBar trackProgress;
+        private System.Windows.Forms.Panel panelVisualizer;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

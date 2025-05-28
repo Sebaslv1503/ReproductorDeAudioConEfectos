@@ -19,7 +19,8 @@ namespace ProyectMediaPlayerVisual
         private Effects effects = new Effects();
         private Timer marqueeTimer = new Timer();
         private MusicPlayer musicPlayer;
-
+        private AudioVisualizer visualizer;
+        private AudioVisualizer visualizer2;
 
 
         public Form1()
@@ -32,16 +33,22 @@ namespace ProyectMediaPlayerVisual
             timerProgress.Start();
             axPlayer.PlayStateChange += axPlayer_PlayStateChange_1;
             musicPlayer.OnSongChanged += (title) => lblTitulo.Text = title;
+            visualizer = new AudioVisualizer(panelVisualizer);
+            visualizer2 = new AudioVisualizer(panel1);
+            visualizer2.Start();
+            visualizer.Start();
 
         }
-     
+
 
 
         private void InicializarControles()
         {           
             this.BackColor = ColorTranslator.FromHtml("#1e1e2f");
             this.Text = "🎶 Reproductor de Música";
-            this.StartPosition = FormStartPosition.CenterScreen;           
+            this.StartPosition = FormStartPosition.CenterScreen;
+            
+
         }
 
         private void btnCargar_Click(object sender, EventArgs e) => musicPlayer.LoadFolder();
@@ -88,5 +95,12 @@ namespace ProyectMediaPlayerVisual
                 musicPlayer.HandleMediaEnded();
             }
         }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            visualizer.Stop();
+            base.OnFormClosing(e);
+        }
+
     }
 }
