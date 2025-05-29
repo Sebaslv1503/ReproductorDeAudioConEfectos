@@ -8,8 +8,7 @@ namespace ProyectMediaPlayerVisual
     {
         public override void Draw(Graphics g, Rectangle bounds, float time)
         {
-            //g.SmoothingMode = SmoothingMode.AntiAlias;
-            //g.Clear(Color.Black);
+            
 
             // Parámetros dinámicos que cambian con el tiempo para animación
             float a = 2 + (float)Math.Sin(time * 0.5f); // oscila entre 1 y 3

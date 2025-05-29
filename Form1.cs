@@ -86,8 +86,19 @@ namespace ProyectMediaPlayerVisual
                 {
                     trackProgress.Value = trackValue;
                 }
+
+                
+                double currentSeconds = axPlayer.Ctlcontrols.currentPosition;
+                int minutes = (int)currentSeconds / 60;
+                int seconds = (int)currentSeconds % 60;
+                lblTiempoActual.Text = $"{minutes:D2}:{seconds:D2}";
+            }
+            else
+            {
+                lblTiempoActual.Text = "00:00";
             }
         }
+
 
         private void trackProgress_Scroll(object sender, EventArgs e)
         {

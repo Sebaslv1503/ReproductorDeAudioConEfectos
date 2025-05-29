@@ -45,6 +45,7 @@
             this.trackProgress = new System.Windows.Forms.TrackBar();
             this.panelVisualizer = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTiempoActual = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.volumenSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axPlayer)).BeginInit();
@@ -216,12 +217,23 @@
             this.panel1.Size = new System.Drawing.Size(200, 62);
             this.panel1.TabIndex = 15;
             // 
+            // lblTiempoActual
+            // 
+            this.lblTiempoActual.AutoSize = true;
+            this.lblTiempoActual.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTiempoActual.Location = new System.Drawing.Point(696, 400);
+            this.lblTiempoActual.Name = "lblTiempoActual";
+            this.lblTiempoActual.Size = new System.Drawing.Size(35, 13);
+            this.lblTiempoActual.TabIndex = 16;
+            this.lblTiempoActual.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(787, 535);
+            this.Controls.Add(this.lblTiempoActual);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelVisualizer);
             this.Controls.Add(this.trackProgress);
@@ -264,6 +276,7 @@
         private System.Windows.Forms.TrackBar trackProgress;
         private System.Windows.Forms.Panel panelVisualizer;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTiempoActual;
     }
 }
 
