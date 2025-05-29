@@ -21,6 +21,7 @@ namespace ProyectMediaPlayerVisual
         private MusicPlayer musicPlayer;
         private AudioVisualizer visualizer;
         private AudioVisualizer visualizer2;
+        private VisualEffectManager effectManager;
 
 
         public Form1()
@@ -37,6 +38,7 @@ namespace ProyectMediaPlayerVisual
             visualizer2 = new AudioVisualizer(panel1);
             visualizer2.Start();
             visualizer.Start();
+            
 
         }
 
@@ -51,7 +53,13 @@ namespace ProyectMediaPlayerVisual
 
         }
 
-        private void btnCargar_Click(object sender, EventArgs e) => musicPlayer.LoadFolder();
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            effectManager = new VisualEffectManager(picCanvas);
+            musicPlayer.LoadFolder();
+
+        }
+            
 
         private void btnPlay_Click(object sender, EventArgs e) => musicPlayer.Play();
 

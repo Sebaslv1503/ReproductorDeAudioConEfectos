@@ -54,7 +54,7 @@
             // picCanvas
             // 
             this.picCanvas.BackColor = System.Drawing.Color.Black;
-            this.picCanvas.Location = new System.Drawing.Point(45, 58);
+            this.picCanvas.Location = new System.Drawing.Point(43, 58);
             this.picCanvas.Margin = new System.Windows.Forms.Padding(2);
             this.picCanvas.Name = "picCanvas";
             this.picCanvas.Size = new System.Drawing.Size(697, 312);
@@ -140,11 +140,11 @@
             // volumenSlider
             // 
             this.volumenSlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.volumenSlider.Location = new System.Drawing.Point(754, 179);
+            this.volumenSlider.Location = new System.Drawing.Point(752, 156);
             this.volumenSlider.Maximum = 100;
             this.volumenSlider.Name = "volumenSlider";
             this.volumenSlider.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.volumenSlider.Size = new System.Drawing.Size(45, 104);
+            this.volumenSlider.Size = new System.Drawing.Size(45, 147);
             this.volumenSlider.TabIndex = 9;
             this.volumenSlider.TickFrequency = 0;
             this.volumenSlider.TickStyle = System.Windows.Forms.TickStyle.None;
@@ -156,7 +156,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(749, 151);
+            this.label1.Location = new System.Drawing.Point(749, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 25);
             this.label1.TabIndex = 10;
@@ -193,7 +193,7 @@
             // trackProgress
             // 
             this.trackProgress.LargeChange = 10;
-            this.trackProgress.Location = new System.Drawing.Point(45, 375);
+            this.trackProgress.Location = new System.Drawing.Point(43, 375);
             this.trackProgress.Maximum = 100;
             this.trackProgress.Name = "trackProgress";
             this.trackProgress.Size = new System.Drawing.Size(697, 45);

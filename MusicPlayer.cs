@@ -1,4 +1,5 @@
 ﻿using AxWMPLib;
+using ProyectMediaPlayerVisual;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -35,11 +36,15 @@ namespace Figures
                 }
             }
         }
+        
 
         private void PlayCurrent()
         {
+            
+
             if (playlist.Count > 0 && currentIndex >= 0 && currentIndex < playlist.Count)
             {
+
                 player.Ctlcontrols.stop();
                 player.URL = playlist[currentIndex];
                 player.Ctlcontrols.play();
