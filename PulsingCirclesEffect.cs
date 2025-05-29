@@ -21,8 +21,8 @@ namespace ProyectMediaPlayerVisual
 
         public override void Draw(Graphics g, Rectangle bounds, float time)
         {
-            g.SmoothingMode = SmoothingMode.AntiAlias;
-            g.Clear(Color.Black);
+            //g.SmoothingMode = SmoothingMode.AntiAlias;
+            //g.Clear(Color.Black);
 
             float centerX = bounds.Width / 2f;
             float centerY = bounds.Height / 2f;

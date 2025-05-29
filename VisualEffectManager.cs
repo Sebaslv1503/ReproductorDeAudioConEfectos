@@ -25,7 +25,8 @@ namespace ProyectMediaPlayerVisual
             {
                 new LissajousEffect(),
                 new PulsingCirclesEffect(),
-                new SpiralEffect()
+                new SpiralEffect(),
+                new SpinningStarsEffect()
             };
 
             currentEffect = effects[random.Next(effects.Count)];
@@ -62,6 +63,11 @@ namespace ProyectMediaPlayerVisual
                 canvas.Image = (Bitmap)bmp.Clone();
             }
         }
+        public void Restart()
+        {
+            SwitchEffect();
+        }
+
 
         public void Stop()
         {

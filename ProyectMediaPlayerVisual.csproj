@@ -89,6 +89,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PulsingCirclesEffect.cs" />
+    <Compile Include="SineCosineEffect.cs" />
+    <Compile Include="SpinningStarsEffect.cs" />
     <Compile Include="SpiralEffect.cs" />
     <Compile Include="VisualEffectManager.cs" />
     <Compile Include="VisualizerEffect.cs" />

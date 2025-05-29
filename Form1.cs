@@ -55,7 +55,6 @@ namespace ProyectMediaPlayerVisual
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            effectManager = new VisualEffectManager(picCanvas);
             musicPlayer.LoadFolder();
 
         }
@@ -98,9 +97,19 @@ namespace ProyectMediaPlayerVisual
 
         private void axPlayer_PlayStateChange_1(object sender, _WMPOCXEvents_PlayStateChangeEvent e)
         {
-            if (e.newState == 8)
+            switch (e.newState)
             {
-                musicPlayer.HandleMediaEnded();
+                case 3: 
+                    if (effectManager == null)
+                        effectManager = new VisualEffectManager(picCanvas);
+                    else
+                        effectManager.Restart(); 
+
+                    break;
+
+                case 8: 
+                    musicPlayer.HandleMediaEnded();
+                    break;
             }
         }
 
