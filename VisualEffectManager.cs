@@ -31,7 +31,7 @@ namespace ProyectMediaPlayerVisual
 
             currentEffect = effects[random.Next(effects.Count)];
 
-            switchTimer = new Timer { Interval = 10000 }; // Cambia cada 10 segundos
+            switchTimer = new Timer { Interval = 8000 }; // Cambia cada 10 segundos
             switchTimer.Tick += (s, e) => SwitchEffect();
 
             renderTimer = new Timer { Interval = 40 }; // ~25 FPS

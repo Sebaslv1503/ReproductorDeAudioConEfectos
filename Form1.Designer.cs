@@ -204,16 +204,16 @@
             // 
             // panelVisualizer
             // 
-            this.panelVisualizer.Location = new System.Drawing.Point(12, 450);
+            this.panelVisualizer.Location = new System.Drawing.Point(12, 419);
             this.panelVisualizer.Name = "panelVisualizer";
-            this.panelVisualizer.Size = new System.Drawing.Size(200, 31);
+            this.panelVisualizer.Size = new System.Drawing.Size(200, 62);
             this.panelVisualizer.TabIndex = 14;
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(575, 450);
+            this.panel1.Location = new System.Drawing.Point(575, 419);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 31);
+            this.panel1.Size = new System.Drawing.Size(200, 62);
             this.panel1.TabIndex = 15;
             // 
             // Form1

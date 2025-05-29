@@ -51,32 +51,34 @@ namespace Figures
             {
                 short sample = BitConverter.ToInt16(e.Buffer, i);
                 float sample32 = sample / 32768f;
-                sum += sample32 * sample32; // energía (cuadrado de la amplitud)
+                sum += sample32 * sample32;
             }
 
-            float rms = (float)Math.Sqrt(sum / sampleCount); // raíz cuadrada de energía promedio
+            float rms = (float)Math.Sqrt(sum / sampleCount);
             volume = rms;
 
-            // Normaliza y actualiza barras solo si el volumen es significativo
-            if (volume < 0.005f)
+            // Ignorar volumen muy bajo
+            if (volume < 0.01f)
             {
                 for (int i = 0; i < barCount; i++)
                     barValues[i] = 0;
                 return;
             }
 
-            float normalized = Math.Min(1f, volume * 10f); // ajusta el multiplicador según sensibilidad
+            // Más insensible a volúmenes bajos, solo reacciona fuerte a sonidos realmente altos
+            float adjusted = (float)Math.Pow(volume, 2.5) * 10f;
+            float normalized = Math.Min(1f, adjusted);
 
-            // Actualiza suavemente cada barra con algo de variación
             Random rand = new Random();
             for (int i = 0; i < barCount; i++)
             {
-                float variance = (float)(rand.NextDouble() * 0.3 + 0.7); // pequeño ruido visual
+                float variance = (float)(rand.NextDouble() * 0.3 + 0.7);
                 float targetValue = normalized * variance;
-                // Suavizado para transiciones más agradables
                 barValues[i] = barValues[i] * 0.6f + targetValue * 0.4f;
             }
         }
+
+
 
 
 
