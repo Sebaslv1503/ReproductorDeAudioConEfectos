@@ -182,7 +182,7 @@
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(122, 29);
             this.btnCargar.TabIndex = 12;
-            this.btnCargar.Text = "Cargar Cancion";
+            this.btnCargar.Text = "Cargar Canciones";
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
